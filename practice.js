@@ -345,7 +345,7 @@ var colt = {
 
 //Code Here
 
-
+console.log(devMountainEmployees.push(tyler, cahlan, ryan, colt))
 
 /*
   Now let's say Cahlan has a mental breakdown and has to take a leave of absence to 'find himself'.
@@ -354,7 +354,16 @@ var colt = {
 
 //Code Here
 
+function terminateEmployment(devMountainEmployees, name){
+  for(var i = 0; i < devMountainEmployees.length; i++){
+    if(devMountainEmployees[i] === name){
+      devMountainEmployees.splice([i], [1])
+    }
+  }
+  return devMountainEmployees
+}
 
+terminateEmployment(devMountainEmployees, cahlan)
 
 ////////// PROBLEM 13 //////////
 
@@ -366,7 +375,7 @@ var colt = {
 
 //Code Here
 
-
+let users = []
 
 /*
   Now add three user objects to your users array. Each user object should contain the following properties. name, email, password, username.
@@ -385,7 +394,21 @@ var user1 = {
 
 //Code Here
 
+var user2 = {
+  name: 'Michael Skarn',
+  email: 'bestboss@gmail.com',
+  password: 'iLoveJavaScript',
+  username: 'infiniteLoop'
+};
 
+var user3 = {
+  name: 'Alex Doss',
+  email: 'yaboi@gmail.com',
+  password: 'iLoveJavaScript',
+  username: 'infiniteLoop'
+};
+
+users.push(user1, user2, user3)
 
 /*
   Now you have a very common data structure. 
@@ -399,8 +422,16 @@ var user1 = {
 
 //Code Here
 
+function deleteMyAccount(users, email){
+  for(var i = 0; i < users.length; i++){
+    if(users[i].email = email){
+      users.splice([i], [1])
+    }
+  }
+  return users
+}
 
-
+deleteMyAccount(users, "tylermcginnis33@gmail.com")
 /*
   The activity we just did is very much how data works in 'the real world'.
 */
