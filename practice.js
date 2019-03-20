@@ -225,7 +225,13 @@ function addItem(myGroceryList, item){
 
 //Code Here
 
-
+function maker(){
+  let array = []
+  for(var i = 1; i <= 215; i++){
+    array.push(i)
+  }
+  return array
+}
 
 ////////// PROBLEM 10 //////////
 
@@ -241,7 +247,13 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   
 //Code Here
 
-
+function addTen(numbers){
+  let arrPlusTen = []
+  for(var i = 0; i < numbers.length; i++){
+    arrPlusTen.push(Number(numbers[i]) + 10)
+  }
+  return arrPlusTen
+}
 
 ////////// PROBLEM 11 //////////
 
