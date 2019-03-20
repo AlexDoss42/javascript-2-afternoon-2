@@ -132,7 +132,7 @@ function divider(numbersArray){
   for(var i = 0; i < numbersArray.length; i++){
     if(numbersArray[i] % 2 === 0){
       evens.push(numbersArray[i])
-    }  else {
+    } else {
       odds.push(numbersArray[i])
     }
   } 
@@ -158,7 +158,15 @@ var getRandomArbitrary = function() {
 
 //Code Here
 
-
+function finder(array){
+  var ranNum = getRandomArbitrary()
+  for(var i = 0; i < array.length; i++){
+    if(array[i] === ranNum){
+      return true
+    }
+  }
+  return false
+}
 
 ////////// PROBLEM 8 //////////
 
