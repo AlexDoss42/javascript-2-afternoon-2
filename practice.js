@@ -196,17 +196,25 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //Code Here
 
 function removeItem(myGroceryList, item){
-  for(var i = myGroceryList.length - 1; i >= 0; i--){
-    if(myGroceryList[i] === item){
-      myGroceryList.splice([i], [1])
+  let empty = []
+  if(myGroceryList && item){
+    for(var i = myGroceryList.length - 1; i >= 0; i--){
+      if(myGroceryList[i] === item){
+        myGroceryList.splice([i], [1])
+      }
     }
+    return myGroceryList
   }
-  return myGroceryList
+  return empty
 }
 
 function addItem(myGroceryList, item){
-  myGroceryList.push(item)
-  return myGroceryList
+  let empty = []
+  if(myGroceryList && item){
+    myGroceryList.push(item)
+    return myGroceryList
+  }
+  return empty
 }
 
 ////////// PROBLEM 9 //////////
